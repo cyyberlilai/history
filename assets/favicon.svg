@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdfaf2"/>
+      <stop offset="1" stop-color="#f2ebda"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Transparent background: only the book remains, scaled up to fill the canvas -->
+  <g transform="translate(32 32) scale(1.66) translate(-32 -34.6)">
+    <!-- Cover: the red shell reads as a red frame around the pages -->
+    <path d="M32 22.2C26.5 18.4 19 17.4 13.4 18.3v29.6c5.6-.9 13.1.1 18.6 3.9 5.5-3.8 13-4.8 18.6-3.9V18.3C45 17.4 37.5 18.4 32 22.2Z" fill="#b5432e"/>
+
+    <!-- Pages: the only white kept -->
+    <path d="M32 24.1c-4.9-3.4-11.4-4.3-16.2-3.5v25.2c4.8-.8 11.3.1 16.2 3.5 4.9-3.4 11.4-4.3 16.2-3.5V20.6c-4.8-.8-11.3.1-16.2 3.5Z" fill="url(#page)"/>
+
+    <!-- Spine crease -->
+    <path d="M32 24.4v24.6" stroke="#8A7358" stroke-width="1.7" stroke-linecap="round" opacity=".85"/>
+
+    <!-- Short lines hinting at text -->
+    <g stroke="#8A7358" stroke-width="1.5" stroke-linecap="round" opacity=".55">
+      <path d="M19 28.4h8.4"/>
+      <path d="M19 33.6h6.2"/>
+      <path d="M36.6 28.4H45"/>
+      <path d="M38.8 33.6H45"/>
+    </g>
+  </g>
+</svg>

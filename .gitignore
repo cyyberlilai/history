@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Python — tools/build-pages.py
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+pip-log.txt
+
+# Playwright
+.playwright/
+test-results/
+
+# Node — only if a bundler gets wired up later
+node_modules/
+npm-debug.log*
+
+# Editors
+.vscode/
+.idea/
+*.swp

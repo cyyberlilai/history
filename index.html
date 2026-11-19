@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Circular Head · History Book</title>
+<meta name="description" content="A sketchbook of Circular Head, Tasmania: eleven watercolours, from the rock at Stanley to the mills and wharves at Smithton.">
+<link rel="preload" as="image" href="./pages/01-nut.webp" fetchpriority="high">
+<link rel="preload" as="image" href="./pages/02-lyons.webp">
+<link rel="preload" as="image" href="./pages/03-cottage.webp">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="./fonts/im-fell-english.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="./fonts/cormorant-garamond-italic.woff2">
+<link rel="modulepreload" crossorigin href="./assets/index-v47.js">
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png?v=2">
+<link rel="alternate icon" type="image/png" sizes="48x48" href="./assets/favicon-48.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon-180.png?v=2">
+  <script type="module" crossorigin src="./assets/index-v47.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-v54.css?v=2">
+  <!-- Lock the page ratio here so a stale stylesheet cannot crop the plates -->
+  <style>.sb-book{aspect-ratio:1760/990}.sb-3d{max-width:960px}</style>
+</head>
+<body>
+<div class="wash" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<header class="top">
+  <a class="name" href="#sketchbook">Circular Head<span class="name-latin">History Book</span></a>
+  <nav id="nav" aria-label="Main navigation"></nav>
+</header>
+
+<main class="page">
+  <section id="sketchbook" class="hero">
+    <p class="hero-kicker" id="kicker"></p>
+    <div class="sb-wrap" id="sbWrap">
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <filter id="sb-mblur-1"><feGaussianBlur stdDeviation="5 0"/></filter>
+        <filter id="sb-mblur-2"><feGaussianBlur stdDeviation="14 0"/></filter>
+      </svg>
+      <div class="sb-stage" id="sbStage">
+        <button class="sb-arrow left" id="sbLeft" aria-label="Previous page"></button>
+        <div class="sb-3d" id="sb3d">
+          <div class="sb-tilt" id="sbTilt">
+            <div class="sb-cast ambient" aria-hidden="true"></div>
+            <div class="sb-cast contact" aria-hidden="true"></div>
+            <div class="sb-cast hair" aria-hidden="true"></div>
+            <div class="sb-book" id="sbBook"></div>
+          </div>
+          <div class="zoomwrap" id="zoomWrap" aria-hidden="true"><div class="zoominner" id="zoomInner"></div></div>
+          <div class="loupe" id="loupe"><span class="grip"></span><span class="ring"><span class="lens" id="loupeLens"></span></span></div>
+        </div>
+        <button class="sb-arrow right" id="sbRight" aria-label="Next page"></button>
+      </div>
+      <div class="sb-tools" role="group" aria-label="Plate tools">
+        <button class="tool" id="zOut" aria-label="Zoom out"></button>
+        <span class="zoom-read" id="zRead">100%</span>
+        <button class="tool" id="zIn" aria-label="Zoom in"></button>
+        <span class="tool-sep" aria-hidden="true"></span>
+        <button class="tool" id="loupeBtn" aria-label="Loupe" aria-pressed="true"></button>
+        <span class="tool-sep" aria-hidden="true"></span>
+        <label class="ink-ctl" title="Ink density">
+          <span class="ink-glyph">Ink</span>
+          <input type="range" id="inkRange" min="55" max="130" value="112" aria-label="Ink density">
+        </label>
+        <span class="tool-sep" aria-hidden="true"></span>
+        <button class="tool" id="dlBtn" aria-label="Keep this page"></button>
+      </div>
+      <p class="sb-hint" id="sbHint"></p>
+      <div class="sb-loading" id="sbLoading"><span class="seal-hold" aria-hidden="true"><span class="load-seal"><span>SHANMEI</span><span>JIN</span></span></span><span id="loadText">Binding…</span></div>
+    </div>
+    <button class="hero-down" id="heroDown" aria-label="Scroll down"></button>
+  </section>
+
+  <div class="rule" data-rule aria-hidden="true"></div>
+
+  <section id="about" class="about">
+    <div class="about-text">
+      <p class="section-label reveal">About this book</p>
+      <div id="aboutParas"></div>
+    </div>
+    <div class="about-art reveal">
+      <div class="osmanthus" id="osmanthus" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <div class="rule short" data-rule aria-hidden="true"></div>
+
+  <section id="plates" class="plates">
+    <p class="section-label reveal">Contents · Eleven Plates</p>
+    <ol class="plate-list" id="plateList"></ol>
+  </section>
+
+  <footer class="colophon" id="colophon">
+    <div class="seal-stamp" id="sealStamp" aria-hidden="true"></div>
+    <p class="colophon-sign reveal">Circular Head · History Book · ©shanmei-jin.win</p>
+  </footer>
+</main>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19.2V5.2"/><path d="M5.8 11.4 12 5.2l6.2 6.2"/>
+  </svg>
+</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
